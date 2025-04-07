@@ -27,9 +27,41 @@ robots:
     #    topic_name3: 
     #      frequency: 1
     #      vars: ["acc.x", "acc.y", "acc.z"]
+
 # Definition of the various robot types
 robot_types:
-  cf21:
+   cfbl:
+    motion_capture:
+      enabled: true
+      # only if enabled; see motion_capture.yaml
+      marker: systemid # default_single_marker
+      dynamics: default
+    big_quad: false
+    battery:
+      voltage_warning: 3.8  # V
+      voltage_critical: 3.7 # V
+    firmware_params:
+      pwm:
+        d00: 0.16609668469985447
+        d01: 0.0
+        d10: 0.02297914810965436
+        d20: 0.0001878280261464696
+        d11: 0.0
+      ctrlLee:
+        mass: 0.037
+    # firmware_params:
+    #   kalman:
+    #     pNAcc_xy: 1.0 # default 0.5
+    #firmware_logging:
+    #   enabled: true
+    #   default_topics:
+    #   pose:
+    #     frequency: 1 # Hz
+    #   custom_topics:
+    #    topic_name3: 
+    #      frequency: 1
+    #      vars: ["acc.x", "acc.y", "acc.z"]
+   cf21:
     motion_capture:
       enabled: true
       # only if enabled; see motion_capture.yaml
