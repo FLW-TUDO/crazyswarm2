@@ -1,7 +1,49 @@
 # named list of all robots
 robots:
-  cf231:
+  cf176:
+    enabled: false
+    uri: radio://0/80/1M/E7E7E7E7B0
+    initial_position: [0.0, 0.0, 0.0]
+    type: cfbl  # see robot_types
+    # firmware_params:
+    #   kalman:
+    #     pNAcc_xy: 1.0 # default 0.5
+    # firmware_logging:
+    #   enabled: true
+    #   custom_topics:
+    #     topic_name3: 
+    #       frequency: 1
+    #       vars: ["acc.x", "acc.y"]
+  cf178:
     enabled: true
+    uri: radio://0/80/1M/E7E7E7E7B2
+    initial_position: [0.0, 0.0, 0.0]
+    type: cfbl  # see robot_types
+    # firmware_params:
+    #   kalman:
+    #     pNAcc_xy: 1.0 # default 0.5
+    # firmware_logging:
+    #   enabled: true
+    #   custom_topics:
+    #     topic_name3: 
+    #       frequency: 1
+    #       vars: ["acc.x", "acc.y"]
+  cf180:
+    enabled: true
+    uri: radio://0/83/1M/E7E7E7E7B4
+    initial_position: [0.0, 0.0, 0.0]
+    type: cfbl  # see robot_types
+    # firmware_params:
+    #   kalman:
+    #     pNAcc_xy: 1.0 # default 0.5
+    # firmware_logging:
+    #   enabled: true
+    #   custom_topics:
+    #     topic_name3: 
+    #       frequency: 1
+    #       vars: ["acc.x", "acc.y"]
+  cf231:
+    enabled: false
     uri: radio://0/80/2M/E7E7E7E7E7
     initial_position: [0.0, 0.0, 0.0]
     type: cf21  # see robot_types
@@ -34,7 +76,7 @@ robot_types:
     motion_capture:
       enabled: true
       # only if enabled; see motion_capture.yaml
-      marker: systemid # default_single_marker
+      marker: default_single_marker  
       dynamics: default
     big_quad: false
     battery:
@@ -84,7 +126,8 @@ robot_types:
     #      frequency: 1
     #      vars: ["acc.x", "acc.y", "acc.z"]
 
-  cf21_mocap_deck:
+  
+cf21_mocap_deck:
     motion_capture:
       enabled: true
       # only if enabled; see motion_capture.yaml

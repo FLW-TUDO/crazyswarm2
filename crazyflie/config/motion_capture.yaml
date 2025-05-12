@@ -3,13 +3,13 @@
     # one of "optitrack", "optitrack_closed_source", "vicon", "qualisys", "nokov", "vrpn", "motionanalysis"
     type: "vicon"
     # Specify the hostname or IP of the computer running the motion capture software
-    hostname: "192.168.2.22"
+    hostname: "192.168.2.221"
 
     topics:
       poses:
         qos:
           mode: "sensor"
-          deadline: 100.0 # Hz
+          deadline: 90.0 # Hz
 
     marker_configurations:
       default: # for standard Crazyflie

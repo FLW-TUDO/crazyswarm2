@@ -10,6 +10,8 @@ def main():
     swarm = Crazyswarm()
     timeHelper = swarm.timeHelper
     allcfs = swarm.allcfs
+    allcfs.arm(True)
+
 
     allcfs.takeoff(targetHeight=Z, duration=1.0+Z)
     timeHelper.sleep(1.5+Z)
@@ -21,6 +23,7 @@ def main():
     swarm.input.waitUntilButtonPressed()
 
     allcfs.land(targetHeight=0.02, duration=1.0+Z)
+    allcfs.arm(False)
     timeHelper.sleep(1.0+Z)
 
 
